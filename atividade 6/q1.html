@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+ let produtos = {
+     nome: '',
+     marca: '',
+     foto: '',
+     preco: 0,
+     estoque: 0,
+     precoTotal: 0,
+ }
+ for(let i = 1; i <= 2; i++){
+     produtos.nome = prompt('Digite o nome do produto: ')
+     produtos.marca = prompt('Digite a marca do produto: ')
+     produtos.foto = prompt('Digite o link da imagem:')
+     produtos.preco = parseFloat(prompt('Digite o preço do Produto:'))
+     produtos.estoque = parseInt(prompt('Digite a quantidade de produtos que tem no estoque:'))
+     produtos.precoTotal = produtos.preco * produtos.estoque
+
+         document.write(`<p> Nome Produto: ${produtos.nome} </p>`)
+         document.write(`<p> Marca: ${produtos.marca}</p>`)
+         document.write(`<img src='${produtos.foto}'/>`)
+         document.write(`<p> Preço: ${produtos.preco}</p>`)
+         document.write(`<p> Quantidade Produtos: ${produtos.estoque}</p>`)
+         document.write(`<p> Valor Total: ${produtos.precoTotal}</p>`)
+}
+
+
+    </script>
+</body>
+</html>
